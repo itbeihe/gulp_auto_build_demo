@@ -92,8 +92,9 @@ gulp.task('js',function(){
 });
 
 gulp.task('zip', function () {
-    run('git diff --name-only  | xargs zip update.zip ').exec();
-})
+    // git 提取当前版本与上一个版本的差异
+    run('git diff HEAD HEAD~ --name-only| xargs zip update.zip ').exec();
+});
 
 gulp.task('build',['css','js']);
 gulp.task('default',['build']);
