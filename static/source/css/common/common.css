@@ -1,6 +1,9 @@
 body {
   padding: 0;
 }
+.test {
+  color: #f938ab;
+}
 .clearfix {
   display: block;
   zoom: 1;
