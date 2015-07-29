@@ -1,0 +1,32 @@
+{
+  "name": "gulp_auto_build_demo",
+  "version": "1.0.0",
+  "description": "one gulp auto build demo",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itbeihe/gulp_auto_build_demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itbeihe/gulp_auto_build_demo/issues"
+  },
+  "homepage": "https://github.com/itbeihe/gulp_auto_build_demo#readme",
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-css-rework-url": "^0.1.2",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-csso": "^1.0.0",
+    "gulp-image-resize": "^0.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-less": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp.spritesmith": "^3.8.2",
+    "merge-stream": "^0.1.8"
+  }
+}

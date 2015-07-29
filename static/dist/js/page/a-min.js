@@ -1,0 +1,1 @@
+$("#slideshow").cycle({fx:"scrollUp",timeout:2e3,delay:-1e3});
