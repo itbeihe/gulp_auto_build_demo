@@ -40,8 +40,6 @@ gulp.task('sprite',['retina'],function () {
     var cssStream = spriteData.css
         .pipe(cru({
             prefix:'../../img/'
-        },function(files){
-            console.log(files);
         }))
         //.pipe(csso())
         .pipe(gulp.dest('static/source/css/common/'));

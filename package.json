@@ -18,7 +18,7 @@
   "homepage": "https://github.com/itbeihe/gulp_auto_build_demo#readme",
   "devDependencies": {
     "gulp-concat": "^2.6.0",
-    "gulp-css-rework-url": "^0.1.2",
+    "gulp-css-rework-url": "git://github.com/itbeihe/gulp-css-rework-url.git#demo",
     "gulp-cssmin": "^0.1.7",
     "gulp-csso": "^1.0.0",
     "gulp-image-resize": "^0.6.0",
