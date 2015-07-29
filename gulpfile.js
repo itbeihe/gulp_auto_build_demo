@@ -10,6 +10,7 @@ var concat = require('gulp-concat');
 var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 var cru = require('gulp-css-rework-url');
+var run = require('gulp-run');
 
 gulp.task('retina',function(){
     return gulp.src('static/source/img/*-2x.{png,jpg}')
@@ -90,7 +91,9 @@ gulp.task('js',function(){
     return merge(commonJsStream, pageJsStream);
 });
 
-
+gulp.task('zip', function () {
+    run('git diff --name-only  | xargs zip update.zip ').exec();
+})
 
 gulp.task('build',['css','js']);
 gulp.task('default',['build']);
