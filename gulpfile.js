@@ -57,7 +57,7 @@ gulp.task('less',function(){
 
 // 构建css文件
 gulp.task('css',['sprite','less'],function(){
-    var commonCss = gulp.src(['static/source/css/**/*.css','static/source/css/**/*.css'])
+    var commonCss = gulp.src(['static/source/css/common/*.css','static/source/css/lib/*.css'])
         .pipe(concat('main.css'))
         .pipe(gulp.dest('static/dist/css/common/'))
         .pipe(cssmin())
