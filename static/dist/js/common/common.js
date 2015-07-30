@@ -1,22 +1,3 @@
-(function(){
-
-    var cDataObj = {}
-    window.cData = {
-        get:function(key){
-            return cDataObj[key];
-        },
-        set:function(key,value){
-            cDataObj[key] = value;
-        }
-    }
-
-    window.CO = {
-        sum :function(a,b){
-            return a+b;
-        }
-    }
-
-})();
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -10772,8 +10753,22 @@ $.fn.cycle.transitions.wipe = function($cont, $slides, opts) {
 
 })(jQuery);
 
-$('#slideshow').cycle({
-    fx: 'scrollUp',
-    timeout: 2000,
-    delay:  -1000
-});
+(function(){
+
+    var cDataObj = {}
+    window.cData = {
+        get:function(key){
+            return cDataObj[key];
+        },
+        set:function(key,value){
+            cDataObj[key] = value;
+        }
+    }
+
+    window.CO = {
+        sum :function(a,b){
+            return a+b;
+        }
+    }
+
+})();

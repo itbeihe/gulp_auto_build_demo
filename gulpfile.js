@@ -66,24 +66,24 @@ gulp.task('css',['sprite','less'],function(){
     var pageCss = gulp.src('static/source/css/page/*.css')
         .pipe(gulp.dest('static/dist/css/page/'))
         .pipe(cssmin())
-        .pipe(rename({suffix:'-min'}))
+        .pipe(rename({suffix:'.min'}))
         .pipe(gulp.dest('static/dist/css/page/'));
     return merge(commonCss, pageCss);
 });
 
 // 构建js文件
 gulp.task('js',function(){
-    var commonJsStream = gulp.src('static/source/js/**/*.js')
-        .pipe(concat('app.js'))
-        .pipe(gulp.dest('static/dist/js/'))
+    var commonJsStream = gulp.src(['static/source/js/lib/*.js','static/source/js/common/*.js'])
+        .pipe(concat('common.js'))
+        .pipe(gulp.dest('static/dist/js/common/'))
         .pipe(uglify())
-        .pipe(rename('app.min.js'))
-        .pipe(gulp.dest('static/dist/js/'));
+        .pipe(rename('common.min.js'))
+        .pipe(gulp.dest('static/dist/js/common/'));
 
     var pageJsStream = gulp.src('static/source/js/page/*.js')
         .pipe(gulp.dest('static/dist/js/page/'))
         .pipe(uglify())
-        .pipe(rename({suffix:'-min'}))
+        .pipe(rename({suffix:'.min'}))
         .pipe(gulp.dest('static/dist/js/page/'));
 
     return merge(commonJsStream, pageJsStream);
