@@ -23,6 +23,7 @@
     "gulp-csso": "^1.0.0",
     "gulp-image-resize": "^0.6.0",
     "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
     "gulp-less": "^3.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-run": "^1.6.10",

@@ -11,6 +11,7 @@ var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 var cru = require('gulp-css-rework-url');
 var run = require('gulp-run');
+var jshint = require('gulp-jshint');
 
 gulp.task('retina',function(){
     return gulp.src('static/source/img/*-2x.{png,jpg}')
@@ -89,10 +90,17 @@ gulp.task('js',function(){
     return merge(commonJsStream, pageJsStream);
 });
 
+// 代码检查
+gulp.task('lint', function() {
+    return gulp.src('static/source/js/**/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
+
 gulp.task('zip', function () {
     // git 提取当前版本与上一个版本的差异
     run('git diff HEAD HEAD~ --name-only| xargs zip update.zip ').exec();
 });
 
-gulp.task('build',['css','js']);
+gulp.task('build',['css','js','lint']);
 gulp.task('default',['build']);
