@@ -1,6 +1,6 @@
 {
   "name": "gulp_auto_build_demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "one gulp auto build demo",
   "main": "gulpfile.js",
   "scripts": {
