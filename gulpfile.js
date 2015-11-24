@@ -102,5 +102,9 @@ gulp.task('zip', function () {
     run('git diff HEAD HEAD~ --name-only| xargs zip update.zip ').exec();
 });
 
-gulp.task('build',['css','js','lint']);
+gulp.task('build',['css','js']);
 gulp.task('default',['build']);
+
+gulp.task('dev',function(){
+
+});
