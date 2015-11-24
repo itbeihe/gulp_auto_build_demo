@@ -10,7 +10,7 @@ var concat = require('gulp-concat');
 var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 var cru = require('gulp-css-rework-url');
-var run = require('gulp-run');
+//var run = require('gulp-run');
 var jshint = require('gulp-jshint');
 
 gulp.task('retina',function(){
@@ -99,7 +99,7 @@ gulp.task('lint', function() {
 
 gulp.task('zip', function () {
     // git 提取当前版本与上一个版本的差异
-    run('git diff HEAD HEAD~ --name-only| xargs zip update.zip ').exec();
+    //run('git diff HEAD HEAD~ --name-only| xargs zip update.zip ').exec();
 });
 
 gulp.task('build',['css','js']);
